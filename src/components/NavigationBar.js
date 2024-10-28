@@ -1,7 +1,7 @@
 import React from "react";
 import logo from "../logo_amt.svg";
+// import { Link } from "react-router-dom";
 import { MenuOptions } from "./MenuOptions";
-import { ChooseFileModal } from "./ChooseFileModal";
 
 import UploadFileIcon from "../icons/upload_file.svg";
 import ExportDashboardIcon from "../icons/export_dashboard.svg";
@@ -14,10 +14,14 @@ import UserIcon from "../icons/person_icon.svg";
 
 export function NavigationBar() {
   const menuItems = [
-    { icon: UploadFileIcon, option: "escolher arquivo", to: "ChooseFileModal" },
+    { icon: UploadFileIcon, option: "escolher arquivo" },
     { icon: ExportDashboardIcon, option: "exportar dashboard" },
     { icon: GenerateReportIcon, option: "gerar relatório", showDivider: true },
-    { icon: EventsRegistrationIcon, option: "registro de eventos" },
+    {
+      icon: EventsRegistrationIcon,
+      option: "registro de eventos",
+      to: "/eventregister",
+    },
     { icon: ResetDashboard, option: "resetar dashboard", spaceBetween: true },
   ];
 

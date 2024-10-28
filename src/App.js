@@ -1,9 +1,10 @@
 import React from "react";
-// import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { RouterProvider } from "react-router-dom";
 import { NavigationBar } from "./components/NavigationBar";
 import { Dashboard } from "./components/Dashboard";
+import { Router } from "./Router";
 
-function App() {
+export function Content() {
   return (
     <>
       <div className="flex">
@@ -12,6 +13,10 @@ function App() {
       </div>
     </>
   );
+}
+
+function App() {
+  return <RouterProvider router={Router} />;
 }
 
 export default App;
